@@ -1,4 +1,4 @@
-package com.subid.market.persistance.mongodb.impi;
+package com.subid.market.persistance.mongodb.impl;
 
 public class ZetController {
 }

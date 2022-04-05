@@ -1,4 +1,4 @@
 package com.subid.market.service;
 
-public interface IMainService {
+public interface IHomeMainService {
 }

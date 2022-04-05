@@ -1,4 +1,4 @@
 package com.subid.market.service;
 
-public interface IMyService {
+public interface IMyPageService {
 }

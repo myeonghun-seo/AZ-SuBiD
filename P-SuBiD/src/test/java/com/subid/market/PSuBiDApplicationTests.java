@@ -1,4 +1,4 @@
-package com.sudib.market;
+package com.subid.market;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

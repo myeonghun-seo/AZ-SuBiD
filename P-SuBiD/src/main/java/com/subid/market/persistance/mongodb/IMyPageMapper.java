@@ -1,4 +1,4 @@
 package com.subid.market.persistance.mongodb;
 
-public interface IMyMapper {
+public interface IMyPageMapper {
 }

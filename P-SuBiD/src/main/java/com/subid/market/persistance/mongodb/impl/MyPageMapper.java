@@ -1,4 +1,4 @@
 package com.subid.market.persistance.mongodb.impl;
 
-public class NewsMapper {
+public class MyPageMapper {
 }
