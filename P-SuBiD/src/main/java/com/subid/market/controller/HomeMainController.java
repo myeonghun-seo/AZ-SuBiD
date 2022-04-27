@@ -54,4 +54,56 @@ public class HomeMainController {
 
     }
 
+    /**
+     * 로그인 화면
+     */
+    @GetMapping(value = "login")
+    public String LogIn() throws Exception {
+
+        log.info(this.getClass().getName() + ".LogIn Start!");
+
+        log.info(this.getClass().getName() + ".LogIn End!");
+
+        return "/homemain/userlogin";
+    }
+
+    /**
+     * 로그아웃 화면
+     */
+    @GetMapping(value = "logout")
+    public String LogOut() throws Exception {
+
+        log.info(this.getClass().getName() + ".LogOut Start!");
+
+        log.info(this.getClass().getName() + ".LogOut End!");
+
+        return "/homemain/userlogin";
+    }
+
+    /**
+     * 비밀번호 찾기 화면
+     */
+    @GetMapping(value = "findpasswd")
+    public String FindPasswd() throws Exception {
+
+        log.info(this.getClass().getName() + ".FindPasswd Start!");
+
+        log.info(this.getClass().getName() + ".FindPasswd End!");
+
+        return "/homemain/userfindpasswd";
+    }
+
+    /**
+     * 비밀번호 바꾸기 화면
+     */
+    @GetMapping(value = "updatepasswd")
+    public String UpdatePasswd() throws Exception {
+
+        log.info(this.getClass().getName() + ".UpdatePasswd Start!");
+
+        log.info(this.getClass().getName() + ".UpdatePasswd End!");
+
+        return "/homemain/userlogin";
+    }
+
 }

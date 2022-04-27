@@ -40,16 +40,16 @@ public class MyPageController {
     }
 
     /**
-     * 로그인 화면
+     * 회원가입 화면
      */
-    @GetMapping(value = "login")
-    public String LogIn() throws Exception {
+    @GetMapping(value = "register")
+    public String UserRegister() throws Exception {
 
-        log.info(this.getClass().getName() + ".LogIn Start!");
+        log.info(this.getClass().getName() + ".UserRegister Start!");
 
-        log.info(this.getClass().getName() + ".LogIn End!");
+        log.info(this.getClass().getName() + ".UserRegister End!");
 
-        return "/inc/loginjs";
+        return "/mypage/userregister";
     }
 
 }

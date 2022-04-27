@@ -10,7 +10,7 @@
             <div>
                 <a href="#">Privacy Policy</a>
                 &middot;
-                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Terms &amp&amp; Conditions</a>
             </div>
             <!-- Scroll Up -->
             <div id="back-top">

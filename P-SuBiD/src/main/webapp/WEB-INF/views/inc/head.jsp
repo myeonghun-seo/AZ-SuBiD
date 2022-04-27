@@ -15,14 +15,14 @@
 
 <!-- CSS here -->
 <link rel="stylesheet" href="/css/diststyle.css">
-<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/styles.css" rel="stylesheet">
 
 <!-- Script here -->
 <script src="/assets/demo/chart-area-demo.js"></script>
 <script src="/assets/demo/chart-bar-demo.js"></script>
-<script src="/js/bundlemin.js" crossorigin="anonymous"></script>
-<script src="/js/chartmin.js" crossorigin="anonymous"></script>
+<script src="/js/jsdelivr-bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="/js/cloudflare-chart.min.js" crossorigin="anonymous"></script>
 <script src="/js/datatables-simple-demo.js"></script>
-<script src="/js/fontawesomeall.js" crossorigin="anonymous"></script>
-<script src="/js/scripts.js"></script>
-<script src="/js/simpledatatables.js" crossorigin="anonymous"></script>
+<script src="/js/fontawesome-all.js" crossorigin="anonymous"></script>
+<script src="/js/sb-admin-scripts.js"></script>
+<script src="/js/jsdelivr-simple-datatables.js" crossorigin="anonymous"></script>
