@@ -1,10 +1,13 @@
 package az.subid.util;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class StringUtil {
 
 	/**
 	 * 데이터 사전에 정의된 키 값을 가져오기 위한 함 
-	 * @param 문장의 첫글자
+	 * @param word 문장의 첫글자
 	 * @return 데이터 사전 키 값
 	 */
 	public static String getFirstWord(String word) {

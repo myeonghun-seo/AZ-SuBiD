@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+<nav class="sb-topnav navbar navbar-expand navbar-green bg-green">
     <!-- Navbar Brand-->
     <a class="navbar-brand ps-3" href="/">SuBiD</a>
     <!-- Sidebar Toggle-->
@@ -20,12 +20,20 @@
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#!">Settings</a></li>
-                <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                <%  // 시퀸스 사용자가 ""이 아니라면, 표시
+                    if (!SS_USER_ID.equals("")) { %>
+                <li><a class="dropdown-item" href="mypage">MyPage</a></li>
+                <%  // 시퀸스 관리자이면, 표시
+                    if (SS_USER_AUTH.equals("admin") | SS_USER_AUTH.equals("master")) { %>
+                <li><a class="dropdown-item" href="admin">Admin</a></li>
+                <%} %>
                 <li>
                     <hr class="dropdown-divider"/>
                 </li>
+                <li><a class="dropdown-item" href="logout">Logout</a></li>
+                <%} else {%>
                 <li><a class="dropdown-item" href="login">LogIn</a></li>
+                <%} %>
             </ul>
         </li>
     </ul>

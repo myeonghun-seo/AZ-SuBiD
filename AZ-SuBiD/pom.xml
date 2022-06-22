@@ -13,6 +13,7 @@
     <groupId>AZ</groupId>
     <artifactId>SuBiD</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+<!--    <packaging>war</packaging>-->
     <name>AZ-SuBiD</name>
     <description>AZ-SuBiD</description>
     <properties>
@@ -20,27 +21,49 @@
         <java.version>1.8</java.version>
 
     </properties>
+    <repositories>
+
+        <!-- Dedicated Repository -->
+
+        <!-- jitpack -->
+        <!-- IGDB -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+
+    </repositories>
     <dependencies>
 
-        <!-- 데이터 전송 시, 문자가 깨지는 현상을 방지하기 위한 BASE64 인코딩 사용라이브러리 추가 -->
+        <!-- dependencies -->
+
+        <!-- ================================================== -->
+        <!--                 Spring boot library                -->
+        <!-- ================================================== -->
+
+        <!-- Spring Boot Starter test -->
         <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>1.10</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
-        <!-- 자바 메일 발송 라이브러리 -->
+        <!-- Spring Boot Starter Web -->
         <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-            <version>1.4</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.7.0</version>
         </dependency>
 
-        <!-- 웹 크롤링을 위해 jsoup 외부라이브러리 추가 -->
+        <!-- ================================================== -->
+        <!--                    DataBase library                -->
+        <!-- ================================================== -->
+
+        <!-- mariadb -->
         <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-            <version>1.12.1</version>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- mongodb -->
@@ -67,43 +90,16 @@
             <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!-- mybatis -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.2</version>
-        </dependency>
-
-        <!-- mariadb -->
-        <dependency>
-            <groupId>org.mariadb.jdbc</groupId>
-            <artifactId>mariadb-java-client</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!-- lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
+        <!-- reactor -->
         <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- ================================================== -->
+        <!--                    JSP library                     -->
+        <!-- ================================================== -->
 
         <!-- jstl 라이브러리 -->
         <dependency>
@@ -116,6 +112,7 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
+<!--            <scope>provided</scope>-->
             <scope>provided</scope>
         </dependency>
 
@@ -129,6 +126,88 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- ================================================== -->
+        <!--                    protobuf library                     -->
+        <!-- ================================================== -->
+
+        <!-- protobuf -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.21.1</version>
+        </dependency>
+
+        <!-- protobuf-format -->
+        <dependency>
+            <groupId>com.googlecode.protobuf-java-format</groupId>
+            <artifactId>protobuf-java-format</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <!-- protobuf-util -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java-util</artifactId>
+            <version>3.20.1</version>
+        </dependency>
+
+        <!-- ================================================== -->
+        <!--                    ETC library                     -->
+        <!-- ================================================== -->
+
+        <!-- 자바 메일 발송 라이브러리 -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+
+        <!-- 웹 크롤링을 위해 jsoup 외부라이브러리 추가 -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.14.3</version>
+        </dependency>
+
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- mashape -->
+        <dependency>
+            <groupId>com.mashape.unirest</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>1.4.9</version>
+        </dependency>
+
+        <!-- ================================================== -->
+        <!--                    API library                     -->
+        <!-- ================================================== -->
+
+        <!-- fuel stetho -->
+        <dependency>
+            <groupId>com.github.kittinunf.fuel</groupId>
+            <artifactId>fuel</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+        <!-- IGDB API -->
+        <dependency>
+            <groupId>com.github.husnjak</groupId>
+            <artifactId>IGDB-API-JVM</artifactId>
+            <version>1.0.5</version>
         </dependency>
 
     </dependencies>

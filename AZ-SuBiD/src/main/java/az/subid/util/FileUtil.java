@@ -10,7 +10,7 @@ public class FileUtil {
 	/**
 	 * 현재 날짜를 기준으로 년 /월 / 일 폴더 생성하기
 	 * 
-	 * @param 파일이 저장되는 ROOT폴더
+	 * @param uploadDir 파일이 저장되는 ROOT폴더
 	 * @return 파일이 저장되기 위해 생성된 전체 폴더 경로
 	 */
 	

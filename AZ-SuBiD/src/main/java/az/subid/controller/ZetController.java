@@ -36,7 +36,7 @@ public class ZetController {
 
         log.info(this.getClass().getName() + ".ZetMain End!");
 
-        return "/zet/mainzet";
+        return "/zet/aaazet";
 
     }
 

@@ -1,27 +1,20 @@
 package az.subid.service.impl;
 
-import java.util.Properties;
-import java.util.logging.Logger;
-
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
 import az.subid.dto.MailDTO;
 import az.subid.service.IMailService;
 import az.subid.util.CmmUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Properties;
+
+@Slf4j
 @Service("MailService")
 public class MailService implements IMailService {
-
-	// 로그 파일 생성 및 로그 출력을 위한 log4j 프레임워크의 자바 객체
-	private Logger log = Logger.getLogger(String.valueOf(this.getClass()));
 
 	// 네이버에서 제공하는 SMTP서버
 	@Value("${spring.mail.host}")

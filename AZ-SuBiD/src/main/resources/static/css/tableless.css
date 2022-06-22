@@ -1,0 +1,61 @@
+.table_style {
+    width: 300px; /* 전체 테이블 폭 지정 */
+}
+
+.table_style ul {
+    clear: left;
+    margin: 0; /*ul 에 대한 ie, ff 차이를 없애기 위해 0 으로 설정 */
+    padding: 0; /*ff 는 속성에 기본 margin, padding 이 설정된 경우가 았음*/
+    list-style-type: none; /* ul li 태그 사용으로 인한 disc 를 안보이도록*/
+}
+
+/*
+테이블 상단 보더를 만들때 아래와 같이 :first-child 선택자를 사용하는것이
+좀더 범용적인 방법이지만 IE는 IE7 이후부터만 이를 제공합니다.
+
+.table_style ul:first-child{
+ border-top: 1px solid #000;
+}
+*/
+.table_style .header {
+    font-weight: bold; /*th 와 같은 볼드 효과를 만듬*/
+    text-align: center; /*th 와 같은 중앙 정렬 효과를 만듬*/
+    border-top: 1px solid #000; /*테이블의 상단 보더를 만듬*/
+}
+
+/*
+만약 첫 컬럼에 th와 같은 제목 효과를 주고자 한다면
+위에 th 속성을 구현하기 위해 사용한 두개의 속성을 없애고
+
+.table_style ul li:first-child {
+ font-weight: bold;
+ text-align: center;
+}
+와 같이 사용하면 됩니다.
+*/
+
+.table_style ul li {
+    float: left;
+    margin: 0; /* 테이블 속성에 사용하던 cellspacing 과 동일 */
+    padding: 2px 1px; /* 테이블 속성에 사용하던 cellpadding 과 동일 */
+    border-bottom: 1px solid #000; /*테이블의 하단 보더를 만듬*/
+    border-left: 1px solid #000; /*테이블의 좌측 보더를 만듬*/
+}
+
+/*
+각 컬럼에의 개별 폭을 지정함
+총 합(padding 과 margin 포함)이 테이블의 총 폭보다 넓으면 디자인이 깨짐
+적절하게 보일수 있도록 조정이 필요함(다른 트릭이 있을법도 한대 아직..;;;;)
+*/
+.table_style ul .column1 {
+    width: 60px;
+}
+
+.table_style ul .column2 {
+    width: 160px;
+}
+
+.table_style ul .column3 {
+    width: 70px;
+    border-right: 1px solid #000; /*테이블의 우측 보더를 만듬*/
+}

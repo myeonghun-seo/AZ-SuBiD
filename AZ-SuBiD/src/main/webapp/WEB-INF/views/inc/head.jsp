@@ -15,14 +15,18 @@
 
 <!-- CSS here -->
 <link rel="stylesheet" href="/css/diststyle.css">
-<link rel="stylesheet" href="/css/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/divtable.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/tableless.css">
 
 <!-- Script here -->
-<script src="/assets/demo/chart-area-demo.js"></script>
-<script src="/assets/demo/chart-bar-demo.js"></script>
-<script src="/js/jsdelivr-bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="/assets/demo/chart-area-demo.js" crossorigin="anonymous"></script>
+<script src="/assets/demo/chart-bar-demo.js" crossorigin="anonymous"></script>
+<script src="/js/annyang.js" crossorigin="anonymous"></script>
 <script src="/js/cloudflare-chart.min.js" crossorigin="anonymous"></script>
-<script src="/js/datatables-simple-demo.js"></script>
+<script src="/js/datatables-simple-demo.js" crossorigin="anonymous"></script>
 <script src="/js/fontawesome-all.js" crossorigin="anonymous"></script>
-<script src="/js/sb-admin-scripts.js"></script>
+<script src="/js/jsdelivr-bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="/js/jsdelivr-simple-datatables.js" crossorigin="anonymous"></script>
+<script src="/js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+<script src="/js/sb-admin-scripts.js" crossorigin="anonymous"></script>

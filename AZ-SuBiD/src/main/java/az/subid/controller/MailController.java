@@ -1,9 +1,5 @@
 package az.subid.controller;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import az.subid.dto.MailDTO;
 import az.subid.service.IMailService;
 import az.subid.util.CmmUtil;
@@ -13,14 +9,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.logging.Logger;
-
-
-/*
- * Controller 선언해야만 Spring 프레임워크에서 Controller인지 인식 가능
- * 자바 서블릿 역할 수행
- */
-
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * Mail은 메일 발송을 관리하며, 발송확인이 가능한 페이지입니다.
@@ -28,9 +19,6 @@ import java.util.logging.Logger;
 @Slf4j
 @Controller
 public class MailController {
-
-	// 로그 파일 생성 및 로그 출력을 위한 log4j 프레임워크의 자바 객체
-   private Logger log = Logger.getLogger(String.valueOf(this.getClass()));
 
    /*
     * 비즈니스 로직 ( 중요로직을 수행하기 위해 사용되는 서비스를 메모리에 적재(싱글톤 패턴 적용됨 ) 메일 발송을 위한 로직을 구현
